@@ -1,3 +1,5 @@
+//çªè²«ã§ä½œã£ãŸã€æ±šã„ã‘ã©è¨±ã—ã¦
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -7,7 +9,7 @@ public class DeepCopySample{
 
      public static void main(String []args){
         // List<Map<String, Object> testList = new ArrayList<>();
-        // testList.addAll(Œ³‚©‚ç‚ ‚Á‚½ƒŠƒXƒg);
+        // testList.addAll(å…ƒã‹ã‚‰ã‚ã£ãŸãƒªã‚¹ãƒˆ);
         int i;
         int j;
         
@@ -26,22 +28,22 @@ public class DeepCopySample{
         testList.add(map1);
         testList.add(map2);
         
-        System.out.println("ƒRƒs[Œ³");
+        System.out.println("ã‚³ãƒ”ãƒ¼å…ƒ");
         for(Map mp : testList){
           System.out.println(mp.get("1key1"));
          }
          System.out.println();
          
-         //ƒ_ƒ‚Èƒpƒ^[ƒ“ ƒfƒB[ƒvƒRƒs[¸”s
+         //ãƒ€ãƒ¡ãªãƒ‘ã‚¿ãƒ¼ãƒ³ ãƒ‡ã‚£ãƒ¼ãƒ—ã‚³ãƒ”ãƒ¼å¤±æ•—
          toList.addAll(testList);
          
-         //‚æ‚ë‚µ‚¢ƒpƒ^[ƒ“@ƒfƒB[ƒvƒRƒs[¬Œ÷
+         //ã‚ˆã‚ã—ã„ãƒ‘ã‚¿ãƒ¼ãƒ³ã€€ãƒ‡ã‚£ãƒ¼ãƒ—ã‚³ãƒ”ãƒ¼æˆåŠŸ
          /*
          for(Map mp : testList){
              toList.add(new HashMap(mp));
          }
          */
-        System.out.println("ƒRƒs[æ");
+        System.out.println("ã‚³ãƒ”ãƒ¼å…ˆ");
          for(Map mp : toList){
           System.out.println(mp.get("1key1"));
          }    
@@ -50,13 +52,13 @@ public class DeepCopySample{
          
          testList.get(0).put("1key1","updated");
          
-        System.out.println("ƒRƒs[Œ³@•ÏXŒã");
+        System.out.println("ã‚³ãƒ”ãƒ¼å…ƒã€€å¤‰æ›´å¾Œ");
         for(Map mp : testList){
           System.out.println(mp.get("1key1"));
          }        
          
          System.out.println();
-         System.out.println("ƒRƒs[æ•ÏXŒã");
+         System.out.println("ã‚³ãƒ”ãƒ¼å…ˆå¤‰æ›´å¾Œ");
          for(Map mp : toList){
           System.out.println(mp.get("1key1"));
          }     
